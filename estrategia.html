@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estrategia - Atlético KIKO</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <div class="titulo">
+      <h1>Atlético KIKO</h1>
+      <p>Panel del entrenador</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="jugadores.html">Jugadores</a>
+    <a href="estrategia.html">Estrategia</a>
+    <a href="equipaciones.html">Equipaciones</a>
+  </nav>
+
+  <main>
+    <section class="panel">
+      <h2>Configura tu estrategia</h2>
+      <p>Reparte 500 puntos entre los 9 atributos. Cada uno debe
+         estar entre 30 y 80.</p>
+
+      <form action="/api/guardar.php" method="POST">
+        <input type="hidden" name="equipo" value="tiburones">
+
+        <div class="campo ancho">
+          <label for="formacion">Formación</label>
+          <select id="formacion" name="formacion" required>
+            <option value="4-3-3">4-3-3</option>
+            <option value="4-4-2">4-4-2</option>
+            <option value="4-2-3-1">4-2-3-1</option>
+            <option value="3-5-2">3-5-2</option>
+            <option value="5-3-2">5-3-2</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="ataque">Ataque</label>
+          <input type="number" id="ataque" name="ataque" min="30" max="80" value="70" required>
+        </div>
+
+        <div class="campo">
+          <label for="defensa">Defensa</label>
+          <input type="number" id="defensa" name="defensa" min="30" max="80" value="65" required>
+        </div>
+
+        <div class="campo">
+          <label for="velocidad">Velocidad</label>
+          <input type="number" id="velocidad" name="velocidad" min="30" max="80" value="70" required>
+        </div>
+
+        <div class="campo">
+          <label for="pase">Pase</label>
+          <input type="number" id="pase" name="pase" min="30" max="80" value="60" required>
+        </div>
+
+        <div class="campo">
+          <label for="posesion">Posesión</label>
+          <input type="number" id="posesion" name="posesion" min="30" max="80" value="50" required>
+        </div>
+
+        <div class="campo">
+          <label for="presion">Presión</label>
+          <input type="number" id="presion" name="presion" min="30" max="80" value="50" required>
+        </div>
+
+        <div class="campo">
+          <label for="resistencia">Resistencia</label>
+          <input type="number" id="resistencia" name="resistencia" min="30" max="80" value="45" required>
+        </div>
+
+        <div class="campo">
+          <label for="fisico">Físico</label>
+          <input type="number" id="fisico" name="fisico" min="30" max="80" value="45" required>
+        </div>
+
+        <div class="campo">
+          <label for="porteria">Portería</label>
+          <input type="number" id="porteria" name="porteria" min="30" max="80" value="45" required>
+        </div>
+
+        <div class="campo ancho">
+          <label for="clave">Clave del entrenador</label>
+          <input type="password" id="clave" name="clave" required>
+        </div>
+
+        <button type="submit">Guardar estrategia</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Atlético KIKO - Liga SIMSOCCER</p>
+  </footer>
+</body>
+</html>

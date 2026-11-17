@@ -1,0 +1,203 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #13334a;
+  background: #eaf3f6;
+}
+
+/* Cabecera con rayas azules y blancas */
+header {
+  background: repeating-linear-gradient(
+    90deg,
+    #0875B9 0px,
+    #0875B9 60px,
+    white 60px,
+    white 120px
+  );
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.titulo {
+  display: inline-block;
+  background: #063650;
+  color: white;
+  padding: 16px 30px;
+  border-radius: 14px;
+}
+
+h1 { margin: 10px 0 6px; }
+
+.titulo p {
+  margin: 0;
+  color: #f7cc39;
+  font-weight: bold;
+}
+
+.escudo {
+  width: 110px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Menú */
+nav {
+  background: #063650;
+  text-align: center;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 12px;
+}
+
+nav a:hover { color: #f7cc39; }
+
+/* Contenido principal */
+main {
+  max-width: 880px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 23px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 20px #103a501a;
+}
+
+h2 {
+  margin-top: 0;
+  color: #063650;
+}
+
+.panel { border-top: 5px solid #0b8da6; }
+
+/* Tarjetas */
+.tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.tarjeta {
+  background: #eaf3f6;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+  color: #087e98;
+}
+
+/* Fotos de las equipaciones en el inicio */
+.foto {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #063650;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #063650;
+}
+
+.portero { background: #f7cc39; }
+
+/* Página de equipaciones */
+.equipacion {
+  background: #eaf3f6;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.equipacion img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.equipacion h3 {
+  color: #087e98;
+  margin-bottom: 0;
+}
+
+/* Botones / enlaces */
+.boton {
+  display: inline-block;
+  background: #087e98;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.boton:hover { background: #065e78; }
+
+/* Formulario: tres columnas en ordenador */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.campo {
+  display: grid;
+  gap: 6px;
+}
+
+/* Formación, clave y botón ocupan toda la fila */
+.ancho, button { grid-column: 1 / -1; }
+
+label { font-weight: bold; }
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #9cbcc8;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  outline: 3px solid #8ed3e3;
+}
+
+button {
+  background: #087e98;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover { background: #065e78; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #063650;
+  color: white;
+}
+
+/* Móvil: una sola columna */
+@media (max-width: 600px) {
+  header { padding: 20px 12px; }
+  section { padding: 16px; }
+  form, .tarjetas { grid-template-columns: 1fr; }
+  nav a { display: block; margin: 6px 0; }
+}
